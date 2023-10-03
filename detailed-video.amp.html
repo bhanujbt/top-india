@@ -10,6 +10,10 @@
    <meta name="description" content="top indian news to your doorstep" />
    <title>Top Indian News</title>
    <script async src="https://cdn.ampproject.org/v0.js"></script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
 </head>
 <style amp-boilerplate>
    body {
@@ -80,7 +84,6 @@
    </style>
 </noscript>
 <style amp-custom>
-   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
    * {
       margin: 0;
@@ -143,7 +146,6 @@
       margin-left: auto;
    }
 
-   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
    * a {
       text-decoration: none;
@@ -2368,6 +2370,51 @@
          flex-direction: column;
       }
 
+      #search-popup .quick-search>.form-control {
+         font-size: 35px !important;
+      }
+      
+      #search-popup .category .cat-page .cat-page-items .cat-items-list li a figure {
+         max-width: 40% !important;
+         width: 144px !important;
+         min-width: 144px;
+      }
+
+      #search-popup .category .cat-page .cat-page-items .cat-items-list li a figure amp-img {
+         height: 85px !important;
+         border-radius: 5px;
+         min-width: 144px;
+         max-width: 153px;
+      }
+
+      #search-popup .category .cat-page .cat-page-items .cat-items-list li a h3 {
+         font-size: 16px !important;
+         line-height: 24px !important;
+         display: -webkit-box;
+         -webkit-line-clamp: 2;
+         -webkit-box-orient: vertical;
+         overflow: hidden;
+      }
+
+      #search-popup .category .cat-page .cat-page-items .cat-items-list {
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+         list-style: none;
+         width: 100%;
+         padding: 0;
+         gap: 32px;
+      }
+
+      #search-popup .category .cat-page .cat-page-items .cat-items-list li {
+         width: 100% !important;
+         display: flex;
+         flex-direction: column;
+      }
+
+      #search-popup .quick-search>.form-control {
+         font-size: 35px !important;
+      }
       .mid-header .nav-row {
          display: none;
       }
@@ -2612,7 +2659,7 @@
       flex-direction: column;
       gap: 16px;
       transition: .8s;
-      z-index: 999999;
+      z-index: 9999999;
       padding: 16px;
    }
 
@@ -3067,13 +3114,52 @@
       }
    }
 
-   /* -------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------
-----------------------  Facedes  Ends Here -----------------------------------------------------
--------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------- */
+   
+   #search-popup .search-box {
+      overflow-y: scroll;
+      max-height: calc(100vh - 38vh);
+   }
+
+   #search-popup {
+      position: fixed;
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      top: 0;
+      z-index: 9999999;
+      height: 100%;
+      background-color: #fff;
+   }
+
+   #search-popup .quick-search {
+      margin: 16px auto;
+      width: 100%;
+   }
+
+   #search-popup .quick-search>.form-control {
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+      color: #b10000 !important;
+      display: block;
+      font-size: 50px;
+      font-weight: 400;
+      height: 100px;
+      padding: 10px 0;
+   }
+
+   body.popbg:after {
+      content: " ";
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #00000070;
+      z-index: 999999;
+      transition: 0.3;
+   }
 </style>
 
 <body>
@@ -3924,19 +4010,23 @@
    </script>
    <script type="text/javascript">
       document.getElementById("menu-button").addEventListener("click", function () {
-         menuShow();
+          menuShow();
+          document.body.classList.add('popbg');
       });
       document.getElementById("close").addEventListener("click", function () {
-         menuClose();
+          menuClose();
+          document.body.classList.remove('popbg');
       });
+
       function menuShow() {
-         document.getElementById("menu-popup").style.right = "0%";
-         console.log("search-click")
+          document.getElementById("menu-popup").style.right = "0%";
+          console.log("search-click")
       }
       function menuClose() {
-         document.getElementById("menu-popup").style.right = "-100%";
+          document.getElementById("menu-popup").style.right = "-100%";
       }
-   </script>
+
+  </script>
    <script type="text/javascript">
       document.getElementById("srchOpen").addEventListener("click", function () {
           srchShow();

@@ -10,6 +10,10 @@
    <meta name="description" content="top indian news to your doorstep" />
    <title>Top Indian News</title>
    <script async src="https://cdn.ampproject.org/v0.js"></script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
 </head>
 <style amp-boilerplate>
    body {
@@ -80,52 +84,52 @@
    </style>
 </noscript>
 <style amp-custom>
-   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-    * {
-        margin: 0;
-        padding: 0;
-    }
 
-    * a {
-        text-decoration: none;
-        color: #3c3c3c;
-    }
+   * {
+      margin: 0;
+      padding: 0;
+   }
 
-    article,
-    aside,
-    details,
-    figcaption,
-    figure,
-    footer,
-    header,
-    hgroup,
-    main,
-    menu,
-    nav,
-    section,
-    summary {
-        display: block;
-    }
+   * a {
+      text-decoration: none;
+      color: #3c3c3c;
+   }
 
-    figure {
-        margin: 0;
-    }
+   article,
+   aside,
+   details,
+   figcaption,
+   figure,
+   footer,
+   header,
+   hgroup,
+   main,
+   menu,
+   nav,
+   section,
+   summary {
+      display: block;
+   }
 
-    amp-img img {
-        object-fit: cover;
-    }
+   figure {
+      margin: 0;
+   }
 
-    html {
-        scroll-behavior: smooth;
-    }
+   amp-img img {
+      object-fit: cover;
+   }
 
-    .container {
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-    
+   html {
+      scroll-behavior: smooth;
+   }
+
+   .container {
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+   }
+
    * a {
       text-decoration: none;
       color: #3c3c3c;
@@ -1344,8 +1348,6 @@
          object-fit: cover;
       }
 
-
-
       .two-news-sidebar .two-side-grid .post-list>:first-child figure .thumb {
          min-height: 259px;
       }
@@ -1377,6 +1379,49 @@
    @media (max-width:991px) {
       .header .mid-header .mid-hd .mid-nav {
          display: none;
+      }
+
+      
+      #search-popup .category .cat-page .cat-page-items .cat-items-list li a figure {
+         max-width: 40% !important;
+         width: 144px !important;
+         min-width: 144px;
+      }
+
+      #search-popup .category .cat-page .cat-page-items .cat-items-list li a figure amp-img {
+         height: 85px !important;
+         border-radius: 5px;
+         min-width: 144px;
+         max-width: 153px;
+      }
+
+      #search-popup .category .cat-page .cat-page-items .cat-items-list li a h3 {
+         font-size: 16px !important;
+         line-height: 24px !important;
+         display: -webkit-box;
+         -webkit-line-clamp: 2;
+         -webkit-box-orient: vertical;
+         overflow: hidden;
+      }
+
+      #search-popup .category .cat-page .cat-page-items .cat-items-list {
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+         list-style: none;
+         width: 100%;
+         padding: 0;
+         gap: 32px;
+      }
+
+      #search-popup .category .cat-page .cat-page-items .cat-items-list li {
+         width: 100% !important;
+         display: flex;
+         flex-direction: column;
+      }
+
+      #search-popup .quick-search>.form-control {
+         font-size: 35px !important;
       }
 
       .one-news-sidebar .live-update .live-timelines .news-list li a h3 {
@@ -1588,6 +1633,10 @@
          width: 100% !important;
          display: flex;
          flex-direction: column;
+      }
+
+      #search-popup .quick-search>.form-control {
+         font-size: 35px !important;
       }
 
       .mid-header .nav-row {
@@ -1834,7 +1883,7 @@
       flex-direction: column;
       gap: 16px;
       transition: .8s;
-      z-index: 999999;
+      z-index: 9999999;
       padding: 16px;
    }
 
@@ -2293,13 +2342,51 @@
       }
    }
 
-   /* -------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------
-----------------------  Facedes  Ends Here -----------------------------------------------------
--------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------- */
+   #search-popup .search-box {
+      overflow-y: scroll;
+      max-height: calc(100vh - 38vh);
+   }
+
+   #search-popup {
+      position: fixed;
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      top: 0;
+      z-index: 9999999;
+      height: 100%;
+      background-color: #fff;
+   }
+
+   #search-popup .quick-search {
+      margin: 16px auto;
+      width: 100%;
+   }
+
+   #search-popup .quick-search>.form-control {
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+      color: #b10000 !important;
+      display: block;
+      font-size: 50px;
+      font-weight: 400;
+      height: 100px;
+      padding: 10px 0;
+   }
+
+   body.popbg:after {
+      content: " ";
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #00000070;
+      z-index: 999999;
+      transition: 0.3;
+   }
 </style>
 
 <body>
@@ -2307,9 +2394,10 @@
       <div id="sticky-header" class="mid-header">
          <div class="container">
             <div class="mid-hd">
-               <div class="menu">
-                  <amp-img src="global-images/search-icon.svg" layout="responsive" alt="search-icon" class="menu-icon"
-                     height="16px" width="16px"></amp-img>
+               <div class="menu" id="srchOpen">
+                  <amp-img layout="responsive" src="./global-images/search-icon.svg" alt="search-icon" class="menu-icon"
+                     height="16px" width="16px">
+                  </amp-img>
                </div>
                <div class="brand"><a class="brand-logo" href="/"><amp-img
                         src="https://images.topindiannews.com/wp-content/uploads/2023/07/17151500/TWITTER-BANNER-1500x500-px.jpg"
@@ -2394,7 +2482,8 @@
                   <ul class="cat-items-list">
                      <li><a href="/national/earthquake-alert-tremors-rock-manipur-district/10095">
                            <figure><amp-img src="https://www.spirenews.net/wp-content/uploads/2023/09/images-5.jpeg"
-                                 layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb" height="90px" width="160px"></amp-img>
+                                 layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb"
+                                 height="90px" width="160px"></amp-img>
                            </figure>
                            <div class="info">
                               <h3 class="headlines line-clamp-3">Earthquake Alert: Tremors Rock Manipur
@@ -2402,8 +2491,10 @@
                            </div>
                         </a></li>
                      <li><a href="/national/irish-singer-sinead-oconnor-has-passed-away-at-the-age-of-56/9990">
-                           <figure><amp-img src="https://www.spirenews.net/wp-content/uploads/2023/07/Sinead-OConnor.jpg"
-                              layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb" height="90px" width="160px"></amp-img></figure>
+                           <figure><amp-img
+                                 src="https://www.spirenews.net/wp-content/uploads/2023/07/Sinead-OConnor.jpg"
+                                 layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb"
+                                 height="90px" width="160px"></amp-img></figure>
                            <div class="info">
                               <h3 class="headlines line-clamp-3">Irish singer Sinéad O’Connor has passed away
                                  at the age of 56.</h3><span>2023-07-27T23:38:07</span>
@@ -2412,7 +2503,8 @@
                      <li><a
                            href="/national/earthquake-in-indonesia-indonesia-shook-by-earthquake-46-killed-more-than-700-injured/9585">
                            <figure><amp-img src="https://www.spirenews.net/wp-content/uploads/2022/11/indonesia.jpg"
-                              layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb" height="90px" width="160px"></amp-img></figure>
+                                 layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb"
+                                 height="90px" width="160px"></amp-img></figure>
                            <div class="info">
                               <h3 class="headlines line-clamp-3">Earthquake in Indonesia: Indonesia shook by
                                  earthquake, 46 killed, more than 700 injured</h3>
@@ -2421,7 +2513,8 @@
                         </a></li>
                      <li><a href="/national/blueface-arrested-for-attempted-murder-in-las-vegas/9407">
                            <figure><amp-img src="https://www.spirenews.net/wp-content/uploads/2022/11/blueface.jpg"
-                              layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb" height="90px" width="160px"></amp-img>
+                                 layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb"
+                                 height="90px" width="160px"></amp-img>
                            </figure>
                            <div class="info">
                               <h3 class="headlines line-clamp-3">Blueface Arrested for Attempted Murder in Las
@@ -2430,8 +2523,10 @@
                         </a></li>
                      <li><a
                            href="/national/kanye-west-is-all-set-to-acquire-parler-an-alternative-social-media-platform/9088">
-                           <figure><amp-img src="https://www.spirenews.net/wp-content/uploads/2022/10/3484561-833958031.jpg"
-                              layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb" height="90px" width="160px"></amp-img></figure>
+                           <figure><amp-img
+                                 src="https://www.spirenews.net/wp-content/uploads/2022/10/3484561-833958031.jpg"
+                                 layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb"
+                                 height="90px" width="160px"></amp-img></figure>
                            <div class="info">
                               <h3 class="headlines line-clamp-3">Kanye West is all set to acquire Parler, an
                                  alternative social media platform</h3><span>2022-10-18T01:45:00</span>
@@ -2440,7 +2535,8 @@
                      <li><a
                            href="/national/lic-ipo-2022-detailed-updates-how-to-apply-price-gmp-ipo-date-and-other-important-details-you-need-to-know/8742">
                            <figure><amp-img src="https://www.spirenews.net/wp-content/uploads/2022/04/download.png"
-                              layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb" height="90px" width="160px"></amp-img></figure>
+                                 layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb"
+                                 height="90px" width="160px"></amp-img></figure>
                            <div class="info">
                               <h3 class="headlines line-clamp-3">LIC IPO – 2022 Detailed Updates, How To
                                  Apply, Price, GMP, IPO Date And Other Important Details You Need To Know!
@@ -2449,7 +2545,8 @@
                         </a></li>
                      <li><a href="/national/one-of-the-biggest-ever-crypto-heists-hackers-steal-over-600-million/8478">
                            <figure><amp-img src="https://www.spirenews.net/wp-content/uploads/2022/03/crypt1.jpg"
-                              layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb" height="90px" width="160px"></amp-img></figure>
+                                 layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb"
+                                 height="90px" width="160px"></amp-img></figure>
                            <div class="info">
                               <h3 class="headlines line-clamp-3">One Of The Biggest Ever Crypto Heists –
                                  Hackers Steal Over $600 Million</h3><span>2022-03-31T12:51:59</span>
@@ -2459,7 +2556,8 @@
                            href="/national/ajay-devgan-starts-shooting-for-drishyam-2-shares-photos-from-the-sets/7868">
                            <figure><amp-img
                                  src="https://www.spirenews.net/wp-content/uploads/2022/02/Ajay-Devgan-starts-shooting-for-Drishyam-2.jpg"
-                                 layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb" height="90px" width="160px"></amp-img></figure>
+                                 layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb"
+                                 height="90px" width="160px"></amp-img></figure>
                            <div class="info">
                               <h3 class="headlines line-clamp-3">“Ajay Devgan starts shooting for Drishyam 2”
                                  shares photos from the sets</h3><span>2022-02-17T16:12:40</span>
@@ -2467,7 +2565,8 @@
                         </a></li>
                      <li><a href="/national/disco-king-bappi-lahiri-dies-at-mumbais-criticare-hospital/7768">
                            <figure><amp-img src="https://www.spirenews.net/wp-content/uploads/2022/02/Bappi-Lehri.jpg"
-                              layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb" height="90px" width="160px"></amp-img></figure>
+                                 layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb"
+                                 height="90px" width="160px"></amp-img></figure>
                            <div class="info">
                               <h3 class="headlines line-clamp-3">Disco King, Bappi Lahiri dies at Mumbai’s
                                  CritiCare Hospital</h3><span>2022-02-16T13:47:19</span>
@@ -2476,7 +2575,8 @@
                      <li><a
                            href="/national/oklahoma-earthquake-a-4-6-magnitude-earthquake-shakes-the-state-tulsa-and-kansas-city-also-effected/6891">
                            <figure><amp-img src="https://www.spirenews.net/wp-content/uploads/2022/02/earthquake.jpg"
-                              layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb" height="90px" width="160px"></amp-img></figure>
+                                 layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb"
+                                 height="90px" width="160px"></amp-img></figure>
                            <div class="info">
                               <h3 class="headlines line-clamp-3">Oklahoma Earthquake, a 4.6-magnitude
                                  earthquake shakes the state, Tulsa and Kansas City also effected</h3>
@@ -2496,7 +2596,8 @@
                            <div class="news">
                               <figure><amp-img
                                     src="https://www.spirenews.net/wp-content/uploads/2023/09/drinking-water-scaled.jpg"
-                                    layout="responsive" class="thumb" alt="side-thumb" height="85px" width="144px"></amp-img></figure>
+                                    layout="responsive" class="thumb" alt="side-thumb" height="85px"
+                                    width="144px"></amp-img></figure>
                               <h3 class="feeds-headlines">The Right Time to Hydrate: Is Drinking Water
                                  Immediately After Meals Beneficial?</h3>
                            </div>
@@ -2504,16 +2605,20 @@
                      <li class="side-feed"><a
                            href="/latest/irish-singer-sinead-oconnor-has-passed-away-at-the-age-of-56">
                            <div class="news">
-                              <figure><amp-img src="https://www.spirenews.net/wp-content/uploads/2023/07/Sinead-OConnor.jpg"
-                                 layout="responsive" class="thumb" alt="side-thumb" height="85px" width="144px"></amp-img></figure>
+                              <figure><amp-img
+                                    src="https://www.spirenews.net/wp-content/uploads/2023/07/Sinead-OConnor.jpg"
+                                    layout="responsive" class="thumb" alt="side-thumb" height="85px"
+                                    width="144px"></amp-img></figure>
                               <h3 class="feeds-headlines">Irish singer Sinéad O’Connor has passed away at the
                                  age of 56.</h3>
                            </div>
                         </a></li>
                      <li class="side-feed"><a href="/latest/jennifer-lopezs-social-media-goes-dark-photos">
                            <div class="news">
-                              <figure><amp-img src="https://www.spirenews.net/wp-content/uploads/2022/11/cropped-jlo1.jpg"
-                                 layout="responsive" class="thumb" alt="side-thumb" height="85px" width="144px"></amp-img></figure>
+                              <figure><amp-img
+                                    src="https://www.spirenews.net/wp-content/uploads/2022/11/cropped-jlo1.jpg"
+                                    layout="responsive" class="thumb" alt="side-thumb" height="85px"
+                                    width="144px"></amp-img></figure>
                               <h3 class="feeds-headlines">Jennifer Lopez’s Social Media Goes Dark: Photos</h3>
                            </div>
                         </a></li>
@@ -2521,7 +2626,8 @@
                            href="/latest/stephen-crichton-net-worth-wiki-age-brother-parents-ethnicity-girlfriend">
                            <div class="news">
                               <figure><amp-img src="https://www.spirenews.net/wp-content/uploads/2022/11/Stephen4.jpg"
-                                 layout="responsive" class="thumb" alt="side-thumb" height="85px" width="144px"></amp-img></figure>
+                                    layout="responsive" class="thumb" alt="side-thumb" height="85px"
+                                    width="144px"></amp-img></figure>
                               <h3 class="feeds-headlines">Stephen Crichton Net Worth, Wiki, Age, Brother,
                                  Parents, Ethnicity, Girlfriend</h3>
                            </div>
@@ -2531,7 +2637,8 @@
                            <div class="news">
                               <figure><amp-img
                                     src="https://www.spirenews.net/wp-content/uploads/2022/11/cropped-brother-sister1.jpg"
-                                    layout="responsive" class="thumb" alt="side-thumb" height="85px" width="144px"></amp-img></figure>
+                                    layout="responsive" class="thumb" alt="side-thumb" height="85px"
+                                    width="144px"></amp-img></figure>
                               <h3 class="feeds-headlines">People got angry after watching the video of a
                                  stepbrother and sister getting married!</h3>
                            </div>
@@ -2539,8 +2646,10 @@
                      <li class="side-feed"><a
                            href="/latest/there-is-a-slowdown-in-the-housing-market-homeowners-should-sit-tight-in-2022">
                            <div class="news">
-                              <figure><amp-img src="https://www.spirenews.net/wp-content/uploads/2022/11/house-for-sale.jpg"
-                                 layout="responsive" class="thumb" alt="side-thumb" height="85px" width="144px"></amp-img></figure>
+                              <figure><amp-img
+                                    src="https://www.spirenews.net/wp-content/uploads/2022/11/house-for-sale.jpg"
+                                    layout="responsive" class="thumb" alt="side-thumb" height="85px"
+                                    width="144px"></amp-img></figure>
                               <h3 class="feeds-headlines">There is a slowdown in the housing market.
                                  Homeowners should sit tight in 2022.</h3>
                            </div>
@@ -2557,8 +2666,10 @@
                            <div class="news">
                               <figure><amp-img
                                     src="https://th-i.thgim.com/public/sport/other-sports/o8sswj/article67348596.ece/alternates/LANDSCAPE_960/IndianTeam.jpg"
-                                    layout="responsive" class="thumb" alt="side-thumb" height="85px" width="144px"></amp-img>
-                                 <amp-img src="./global-images/videoicon.png" layout="responsive" alt="video-icon" class="videoicon" height="25px" width="25px"></amp-img>
+                                    layout="responsive" class="thumb" alt="side-thumb" height="85px"
+                                    width="144px"></amp-img>
+                                 <amp-img src="./global-images/videoicon.png" layout="responsive" alt="video-icon"
+                                    class="videoicon" height="25px" width="25px"></amp-img>
                               </figure>
                               <h3 class="feeds-headlines">The Right Time to Hydrate: Is Drinking Water
                                  Immediately After Meals Beneficial?</h3>
@@ -2569,8 +2680,10 @@
                            <div class="news">
                               <figure><amp-img
                                     src="https://th-i.thgim.com/public/incoming/yxf78h/article67347951.ece/alternates/LANDSCAPE_1200/20230916229L.jpg"
-                                    layout="responsive" class="thumb" alt="side-thumb" height="85px" width="144px"></amp-img>
-                                 <amp-img src="./global-images/videoicon.png" layout="responsive" alt="video-icon" class="videoicon" height="25px" width="25px"></amp-img>
+                                    layout="responsive" class="thumb" alt="side-thumb" height="85px"
+                                    width="144px"></amp-img>
+                                 <amp-img src="./global-images/videoicon.png" layout="responsive" alt="video-icon"
+                                    class="videoicon" height="25px" width="25px"></amp-img>
                               </figure>
                               <h3 class="feeds-headlines">Irish singer Sinéad O’Connor has passed away
                                  at the age of 56.</h3>
@@ -2580,8 +2693,10 @@
                            <div class="news">
                               <figure><amp-img
                                     src="https://th-i.thgim.com/public/incoming/9v4o7k/article67344535.ece/alternates/LANDSCAPE_1200/Google_Lawsuit_North_Carolina_23077.jpg"
-                                    layout="responsive" class="thumb" alt="side-thumb" height="85px" width="144px"></amp-img>
-                                 <amp-img src="./global-images/videoicon.png" layout="responsive" alt="video-icon" class="videoicon" height="25px" width="25px"></amp-img>
+                                    layout="responsive" class="thumb" alt="side-thumb" height="85px"
+                                    width="144px"></amp-img>
+                                 <amp-img src="./global-images/videoicon.png" layout="responsive" alt="video-icon"
+                                    class="videoicon" height="25px" width="25px"></amp-img>
                               </figure>
                               <h3 class="feeds-headlines">Jennifer Lopez’s Social Media Goes Dark:
                                  Photos</h3>
@@ -2592,8 +2707,10 @@
                            <div class="news">
                               <figure><amp-img
                                     src="https://th-i.thgim.com/public/incoming/ty5fo/article67346107.ece/alternates/LANDSCAPE_1200/IMG_Agri14.jpg_2_1_TM9UGB8J.jpg"
-                                    layout="responsive" class="thumb" alt="side-thumb" height="85px" width="144px"></amp-img>
-                                 <amp-img src="./global-images/videoicon.png" layout="responsive" alt="video-icon" class="videoicon" height="25px" width="25px"></amp-img>
+                                    layout="responsive" class="thumb" alt="side-thumb" height="85px"
+                                    width="144px"></amp-img>
+                                 <amp-img src="./global-images/videoicon.png" layout="responsive" alt="video-icon"
+                                    class="videoicon" height="25px" width="25px"></amp-img>
                               </figure>
                               <h3 class="feeds-headlines">Stephen Crichton Net Worth, Wiki, Age,
                                  Brother, Parents, Ethnicity, Girlfriend</h3>
@@ -2604,8 +2721,10 @@
                            <div class="news">
                               <figure><amp-img
                                     src="https://www.spirenews.net/wp-content/uploads/2022/11/cropped-brother-sister1.jpg"
-                                    layout="responsive" class="thumb" alt="side-thumb" height="85px" width="144px"></amp-img>
-                                 <amp-img src="./global-images/videoicon.png" layout="responsive" alt="video-icon" class="videoicon" height="25px" width="25px"></amp-img>
+                                    layout="responsive" class="thumb" alt="side-thumb" height="85px"
+                                    width="144px"></amp-img>
+                                 <amp-img src="./global-images/videoicon.png" layout="responsive" alt="video-icon"
+                                    class="videoicon" height="25px" width="25px"></amp-img>
                               </figure>
                               <h3 class="feeds-headlines">People got angry after watching the video of
                                  a stepbrother and sister getting married!</h3>
@@ -2616,8 +2735,10 @@
                            <div class="news">
                               <figure><amp-img
                                     src="https://th-i.thgim.com/public/sport/hpve84/article67346350.ece/alternates/LANDSCAPE_1200/DSC_3818.jpg"
-                                    layout="responsive" class="thumb" alt="side-thumb" height="85px" width="144px"></amp-img>
-                                 <amp-img src="./global-images/videoicon.png" layout="responsive" alt="video-icon" class="videoicon" height="25px" width="25px"></amp-img>
+                                    layout="responsive" class="thumb" alt="side-thumb" height="85px"
+                                    width="144px"></amp-img>
+                                 <amp-img src="./global-images/videoicon.png" layout="responsive" alt="video-icon"
+                                    class="videoicon" height="25px" width="25px"></amp-img>
                               </figure>
                               <h3 class="feeds-headlines">There is a slowdown in the housing market.
                                  Homeowners should sit tight in 2022.</h3>
@@ -2634,7 +2755,8 @@
                         <a href="">
                            <figure><amp-img
                                  src="https://th-i.thgim.com/public/incoming/xo8bn3/article67345826.ece/alternates/LANDSCAPE_320/20230910256L.jpg"
-                                 layout="responsive" alt="" class="thumb" height="150px" width="192px"></amp-img></figure>
+                                 layout="responsive" alt="" class="thumb" height="150px" width="192px"></amp-img>
+                           </figure>
                            <h3 class="headlines">India last won a gold in equestrian sports in the individual
                               event at the 1982 New Delhi Asian Games</h3>
                         </a>
@@ -2643,7 +2765,8 @@
                         <a href="">
                            <figure><amp-img
                                  src="https://th-i.thgim.com/public/incoming/ume860/article67346106.ece/alternates/LANDSCAPE_1200/IMG_2022-05-13T100024Z_1_2_1_B69R75JS.jpg"
-                                 layout="responsive" alt="" class="thumb" height="150px" width="192px"></amp-img></figure>
+                                 layout="responsive" alt="" class="thumb" height="150px" width="192px"></amp-img>
+                           </figure>
                            <h3 class="headlines">India last won a gold in equestrian sports in the individual
                               event at the 1982 New Delhi Asian Games</h3>
                         </a>
@@ -2652,7 +2775,8 @@
                         <a href="">
                            <figure><amp-img
                                  src="https://th-i.thgim.com/public/incoming/q0wevk/article67346378.ece/alternates/LANDSCAPE_1200/AP09_23_2023_000035A.jpg"
-                                 layout="responsive" alt="" class="thumb" height="150px" width="192px"></amp-img></figure>
+                                 layout="responsive" alt="" class="thumb" height="150px" width="192px"></amp-img>
+                           </figure>
                            <h3 class="headlines">India last won a gold in equestrian sports in the individual
                               event at the 1982 New Delhi Asian Games</h3>
                         </a>
@@ -2661,7 +2785,8 @@
                         <a href="">
                            <figure><amp-img
                                  src="https://th-i.thgim.com/public/incoming/xo8bn3/article67345826.ece/alternates/LANDSCAPE_320/20230910256L.jpg"
-                                 layout="responsive" alt="" class="thumb" height="150px" width="192px"></amp-img></figure>
+                                 layout="responsive" alt="" class="thumb" height="150px" width="192px"></amp-img>
+                           </figure>
                            <h3 class="headlines">India last won a gold in equestrian sports in the individual
                               event at the 1982 New Delhi Asian Games</h3>
                         </a>
@@ -2670,7 +2795,8 @@
                         <a href="">
                            <figure><amp-img
                                  src="https://th-i.thgim.com/public/incoming/h21fox/article67345928.ece/alternates/LANDSCAPE_1200/2023-09-25T131131Z_87401888_RC2NPW9CJ6RV_RTRMADP_3_UKRAINE-CRISIS-NAVY-COMMANDER.JPG"
-                                 layout="responsive" alt="" class="thumb" height="150px" width="192px"></amp-img></figure>
+                                 layout="responsive" alt="" class="thumb" height="150px" width="192px"></amp-img>
+                           </figure>
                            <h3 class="headlines">India last won a gold in equestrian sports in the individual
                               event at the 1982 New Delhi Asian Games</h3>
                         </a>
@@ -2679,7 +2805,8 @@
                         <a href="">
                            <figure><amp-img
                                  src="https://images.thejbt.com/uploadimage/library/16_9/16_9_2/IMAGE_1695726414.webp"
-                                 layout="responsive" alt="" class="thumb" height="150px" width="192px"></amp-img></figure>
+                                 layout="responsive" alt="" class="thumb" height="150px" width="192px"></amp-img>
+                           </figure>
                            <h3 class="headlines">India last won a gold in equestrian sports in the individual
                               event at the 1982 New Delhi Asian Games</h3>
                         </a>
@@ -2706,6 +2833,142 @@
             </div>
          </div>
       </section>
+   </div>
+   <div id="search-popup">
+      <section class="category">
+         <div class="container">
+            <div class="row cat-page">
+               <div class="cat-page-items col-md-12">
+                  <form class="quick-search" action="https://www.theindiadaily.com/search"
+                     data-gtm-form-interact-id="0"><input type="text" name="q" placeholder="Type to search..."
+                        class="form-control search-input" autocomplete="off" data-gtm-form-interact-field-id="0"><span
+                        id="srchClose" class="close-search active" style="color: #828b96;
+                          cursor: pointer;
+                          display: inline-block;
+                          font-size: 60px;
+                          position: absolute;
+                          right: 30px;
+                          top: -24px;">×
+                     </span>
+                  </form>
+                  <p class="search-result-title">Search result: </p>
+                  <ul class="cat-items-list search-box">
+                     <li><a href="/national/earthquake-alert-tremors-rock-manipur-district/10095">
+                           <figure><amp-img src="https://www.spirenews.net/wp-content/uploads/2023/09/images-5.jpeg"
+                                 layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb"
+                                 height="90px" width="160px"></amp-img>
+                           </figure>
+                           <div class="info">
+                              <h3 class="headlines line-clamp-3">Earthquake Alert: Tremors Rock Manipur
+                                 District</h3><span>2023-09-12T12:05:30</span>
+                           </div>
+                        </a></li>
+                     <li><a href="/national/irish-singer-sinead-oconnor-has-passed-away-at-the-age-of-56/9990">
+                           <figure><amp-img
+                                 src="https://www.spirenews.net/wp-content/uploads/2023/07/Sinead-OConnor.jpg"
+                                 layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb"
+                                 height="90px" width="160px"></amp-img></figure>
+                           <div class="info">
+                              <h3 class="headlines line-clamp-3">Irish singer Sinéad O’Connor has passed
+                                 away
+                                 at the age of 56.</h3><span>2023-07-27T23:38:07</span>
+                           </div>
+                        </a></li>
+                     <li><a
+                           href="/national/earthquake-in-indonesia-indonesia-shook-by-earthquake-46-killed-more-than-700-injured/9585">
+                           <figure><amp-img src="https://www.spirenews.net/wp-content/uploads/2022/11/indonesia.jpg"
+                                 layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb"
+                                 height="90px" width="160px"></amp-img></figure>
+                           <div class="info">
+                              <h3 class="headlines line-clamp-3">Earthquake in Indonesia: Indonesia shook
+                                 by
+                                 earthquake, 46 killed, more than 700 injured</h3>
+                              <span>2022-11-21T22:03:42</span>
+                           </div>
+                        </a></li>
+                     <li><a href="/national/blueface-arrested-for-attempted-murder-in-las-vegas/9407">
+                           <figure><amp-img src="https://www.spirenews.net/wp-content/uploads/2022/11/blueface.jpg"
+                                 layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb"
+                                 height="90px" width="160px"></amp-img>
+                           </figure>
+                           <div class="info">
+                              <h3 class="headlines line-clamp-3">Blueface Arrested for Attempted Murder in
+                                 Las
+                                 Vegas</h3><span>2022-11-16T07:32:23</span>
+                           </div>
+                        </a></li>
+                     <li><a
+                           href="/national/kanye-west-is-all-set-to-acquire-parler-an-alternative-social-media-platform/9088">
+                           <figure><amp-img
+                                 src="https://www.spirenews.net/wp-content/uploads/2022/10/3484561-833958031.jpg"
+                                 layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb"
+                                 height="90px" width="160px"></amp-img></figure>
+                           <div class="info">
+                              <h3 class="headlines line-clamp-3">Kanye West is all set to acquire Parler,
+                                 an
+                                 alternative social media platform</h3><span>2022-10-18T01:45:00</span>
+                           </div>
+                        </a></li>
+                     <li><a
+                           href="/national/lic-ipo-2022-detailed-updates-how-to-apply-price-gmp-ipo-date-and-other-important-details-you-need-to-know/8742">
+                           <figure><amp-img src="https://www.spirenews.net/wp-content/uploads/2022/04/download.png"
+                                 layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb"
+                                 height="90px" width="160px"></amp-img></figure>
+                           <div class="info">
+                              <h3 class="headlines line-clamp-3">LIC IPO – 2022 Detailed Updates, How To
+                                 Apply, Price, GMP, IPO Date And Other Important Details You Need To
+                                 Know!
+                              </h3><span>2022-04-29T14:12:31</span>
+                           </div>
+                        </a></li>
+                     <li><a href="/national/one-of-the-biggest-ever-crypto-heists-hackers-steal-over-600-million/8478">
+                           <figure><amp-img src="https://www.spirenews.net/wp-content/uploads/2022/03/crypt1.jpg"
+                                 layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb"
+                                 height="90px" width="160px"></amp-img></figure>
+                           <div class="info">
+                              <h3 class="headlines line-clamp-3">One Of The Biggest Ever Crypto Heists –
+                                 Hackers Steal Over $600 Million</h3><span>2022-03-31T12:51:59</span>
+                           </div>
+                        </a></li>
+                     <li><a
+                           href="/national/ajay-devgan-starts-shooting-for-drishyam-2-shares-photos-from-the-sets/7868">
+                           <figure><amp-img
+                                 src="https://www.spirenews.net/wp-content/uploads/2022/02/Ajay-Devgan-starts-shooting-for-Drishyam-2.jpg"
+                                 layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb"
+                                 height="90px" width="160px"></amp-img></figure>
+                           <div class="info">
+                              <h3 class="headlines line-clamp-3">“Ajay Devgan starts shooting for Drishyam
+                                 2”
+                                 shares photos from the sets</h3><span>2022-02-17T16:12:40</span>
+                           </div>
+                        </a></li>
+                     <li><a href="/national/disco-king-bappi-lahiri-dies-at-mumbais-criticare-hospital/7768">
+                           <figure><amp-img src="https://www.spirenews.net/wp-content/uploads/2022/02/Bappi-Lehri.jpg"
+                                 layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb"
+                                 height="90px" width="160px"></amp-img></figure>
+                           <div class="info">
+                              <h3 class="headlines line-clamp-3">Disco King, Bappi Lahiri dies at Mumbai’s
+                                 CritiCare Hospital</h3><span>2022-02-16T13:47:19</span>
+                           </div>
+                        </a></li>
+                     <li><a
+                           href="/national/oklahoma-earthquake-a-4-6-magnitude-earthquake-shakes-the-state-tulsa-and-kansas-city-also-effected/6891">
+                           <figure><amp-img src="https://www.spirenews.net/wp-content/uploads/2022/02/earthquake.jpg"
+                                 layout="responsive" alt="Earthquake Alert: Tremors Rock Manipur District" class="thumb"
+                                 height="90px" width="160px"></amp-img></figure>
+                           <div class="info">
+                              <h3 class="headlines line-clamp-3">Oklahoma Earthquake, a 4.6-magnitude
+                                 earthquake shakes the state, Tulsa and Kansas City also effected</h3>
+                              <span>2022-02-01T00:27:16</span>
+                           </div>
+                        </a></li>
+                  </ul>
+               </div>
+
+            </div>
+         </div>
+      </section>
+
    </div>
    <div id="Footer">
       <section class="footer">
@@ -2846,10 +3109,13 @@
    <script type="text/javascript">
       document.getElementById("menu-button").addEventListener("click", function () {
          menuShow();
+         document.body.classList.add('popbg');
       });
       document.getElementById("close").addEventListener("click", function () {
          menuClose();
+         document.body.classList.remove('popbg');
       });
+
       function menuShow() {
          document.getElementById("menu-popup").style.right = "0%";
          console.log("search-click")
@@ -2857,6 +3123,23 @@
       function menuClose() {
          document.getElementById("menu-popup").style.right = "-100%";
       }
+
+   </script>
+   <script type="text/javascript">
+      document.getElementById("srchOpen").addEventListener("click", function () {
+         srchShow();
+      });
+      document.getElementById("srchClose").addEventListener("click", function () {
+         srchHide();
+      });
+
+      function srchShow() {
+         document.getElementById("search-popup").style.display = "flex";
+      }
+      function srchHide() {
+         document.getElementById("search-popup").style.display = "none";
+      }
+
    </script>
 </body>
 

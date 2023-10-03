@@ -10,6 +10,10 @@
    <meta name="description" content="top indian news to your doorstep" />
    <title>Top Indian News</title>
    <script async src="https://cdn.ampproject.org/v0.js"></script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
 </head>
 <style amp-boilerplate>
    body {
@@ -80,7 +84,6 @@
    </style>
 </noscript>
 <style amp-custom>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
     * {
         margin: 0;
         padding: 0;
@@ -2622,7 +2625,7 @@ section {
    flex-direction: column;
    gap: 16px;
    transition: .8s;
-   z-index: 999999;
+   z-index: 9999999;
    padding: 16px;
 }
 
@@ -3259,6 +3262,17 @@ ul.current-live-update li span{
 
 ul.current-live-update li p{
    font-size: 14px;
+}
+body.popbg:after {
+   content: " ";
+   width: 100%;
+   height: 100vh;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background: #00000070;
+   z-index: 999999;
+   transition: 0.3;
 }
 </style>
 <body>
@@ -3930,20 +3944,24 @@ ul.current-live-update li p{
         }
     </script>
     <script type="text/javascript">
-        document.getElementById("menu-button").addEventListener("click", function () {
-            menuShow();
-        });
-        document.getElementById("close").addEventListener("click", function () {
-            menuClose();
-        });
-        function menuShow() {
-            document.getElementById("menu-popup").style.right = "0%";
-            console.log("search-click")
-        }
-        function menuClose() {
-            document.getElementById("menu-popup").style.right = "-100%";
-        }
-    </script>
+      document.getElementById("menu-button").addEventListener("click", function () {
+          menuShow();
+          document.body.classList.add('popbg');
+      });
+      document.getElementById("close").addEventListener("click", function () {
+          menuClose();
+          document.body.classList.remove('popbg');
+      });
+
+      function menuShow() {
+          document.getElementById("menu-popup").style.right = "0%";
+          console.log("search-click")
+      }
+      function menuClose() {
+          document.getElementById("menu-popup").style.right = "-100%";
+      }
+
+  </script>
     <script type="text/javascript">
         document.getElementById("srchOpen").addEventListener("click", function () {
             srchShow();

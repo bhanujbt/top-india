@@ -921,19 +921,23 @@
     </script>
     <script type="text/javascript">
         document.getElementById("menu-button").addEventListener("click", function () {
-            menuShow();
+           menuShow();
+           document.body.classList.add('popbg');
         });
         document.getElementById("close").addEventListener("click", function () {
-            menuClose();
+           menuClose();
+           document.body.classList.remove('popbg');
         });
+  
         function menuShow() {
-            document.getElementById("menu-popup").style.right = "0%";
-            console.log("search-click")
+           document.getElementById("menu-popup").style.right = "0%";
+           console.log("search-click")
         }
         function menuClose() {
-            document.getElementById("menu-popup").style.right = "-100%";
+           document.getElementById("menu-popup").style.right = "-100%";
         }
-    </script>
+  
+     </script>
     <script type="text/javascript">
         document.getElementById("srchOpen").addEventListener("click", function () {
             srchShow();
