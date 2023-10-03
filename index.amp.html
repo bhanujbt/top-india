@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+        <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
     <style amp-boilerplate>
         body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -132,6 +133,7 @@
 
     *a:hover {
         text-decoration: underline;
+        text-underline-position: under;
         text-underline-position: under;
     }
 
@@ -2261,25 +2263,25 @@
         }
 
         #search-popup .quick-search>.form-control {
-            font-size: 35px !important;
+            font-size: 35px;
         }
 
         #search-popup .category .cat-page .cat-page-items .cat-items-list li a figure {
-            max-width: 40% !important;
-            width: 144px !important;
+            max-width: 40%;
+            width: 144px;
             min-width: 144px;
         }
 
         #search-popup .category .cat-page .cat-page-items .cat-items-list li a figure amp-img {
-            height: 85px !important;
+            height: 85px;
             border-radius: 5px;
             min-width: 144px;
             max-width: 153px;
         }
 
         #search-popup .category .cat-page .cat-page-items .cat-items-list li a h3 {
-            font-size: 16px !important;
-            line-height: 24px !important;
+            font-size: 16px;
+            line-height: 24px;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
@@ -2297,13 +2299,13 @@
         }
 
         #search-popup .category .cat-page .cat-page-items .cat-items-list li {
-            width: 100% !important;
+            width: 100%;
             display: flex;
             flex-direction: column;
         }
 
         #search-popup .quick-search>.form-control {
-            font-size: 35px !important;
+            font-size: 35px;
         }
 
         .mid-header .mid-hd {
@@ -2610,7 +2612,7 @@
 
 
     .category .cat-page .cat-page-items .cat-items-list li a figure .videoicon {
-        width: 35.564px !important;
+        width: 35.564px;
         height: 35.564px;
         min-width: 35.564px;
         object-fit: cover;
@@ -2738,7 +2740,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        padding: 4px 15px !important;
+        padding: 4px 15px;
         overflow-y: hidden;
         background-color: #f2f3f5;
         overflow-x: scroll;
@@ -2859,7 +2861,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 8px;
-        padding-left: 0px !important;
+        padding-left: 0px;
         list-style: none;
         padding: 0;
     }
@@ -3012,9 +3014,8 @@
         border: 0;
         border-radius: 0;
         box-shadow: none;
-        color: #b10000 !important;
+        color: #b10000;
         display: block;
-        font-size: 50px;
         font-weight: 400;
         height: 100px;
         padding: 10px 0;
@@ -4165,8 +4166,7 @@
                 <div class="container">
                     <div class="row cat-page">
                         <div class="cat-page-items col-md-12">
-                            <form class="quick-search" action="https://www.theindiadaily.com/search"
-                                data-gtm-form-interact-id="0"><input type="text" name="q"
+                            <form class="quick-search"  method="GET" action="/documentation/examples/api/submit-form" target="_top"><input type="text" name="q"
                                     placeholder="Type to search..." class="form-control search-input" autocomplete="off"
                                     data-gtm-form-interact-field-id="0"><span id="srchClose" class="close-search active"
                                     style="color: #828b96;
@@ -4425,7 +4425,7 @@
                                     Get Latest news and every updates from Top Indian News Powered
                                     by Jan Bhawna Times Group
                                 </span>
-                                <form>
+                                <form method="GET" action="/documentation/examples/api/submit-form" target="_top">
                                     <input type="email" placeholder="Enter Your Email ID" name id />
                                     <button class="form-button">Send</button>
                                 </form>
@@ -4438,52 +4438,4 @@
         </div>
     </div>
 </body>
-<script type="text/javascript">
-    window.onscroll = function () { scrollsticky() }
-    var navbar = document.getElementById("sticky-header");
-    var sticky = navbar.offsetTop
-    function scrollsticky() {
-        if (window.pageYOffset >= sticky) {
-            navbar.classList.add("stickynav")
-        } else {
-            navbar.classList.remove("stickynav");
-        }
-    }
-</script>
-<script type="text/javascript">
-    document.getElementById("menu-button").addEventListener("click", function () {
-        menuShow();
-        document.body.classList.add('popbg');
-    });
-    document.getElementById("close").addEventListener("click", function () {
-        menuClose();
-        document.body.classList.remove('popbg');
-    });
-
-    function menuShow() {
-        document.getElementById("menu-popup").style.right = "0%";
-        console.log("search-click")
-    }
-    function menuClose() {
-        document.getElementById("menu-popup").style.right = "-100%";
-    }
-
-</script>
-<script type="text/javascript">
-    document.getElementById("srchOpen").addEventListener("click", function () {
-        srchShow();
-    });
-    document.getElementById("srchClose").addEventListener("click", function () {
-        srchHide();
-    });
-
-    function srchShow() {
-        document.getElementById("search-popup").style.display = "flex";
-    }
-    function srchHide() {
-        document.getElementById("search-popup").style.display = "none";
-    }
-
-</script>
-
 </html>
