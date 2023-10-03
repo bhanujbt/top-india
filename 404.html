@@ -453,9 +453,11 @@
     <script type="text/javascript">
         document.getElementById("menu-button").addEventListener("click", function () {
             menuShow();
+            document.body.classList.add('popbg');
         });
         document.getElementById("close").addEventListener("click", function () {
             menuClose();
+            document.body.classList.remove('popbg');
         });
 
         function menuShow() {

@@ -2501,7 +2501,7 @@ section {
    flex-direction: column;
    gap: 16px;
    transition: .8s;
-   z-index: 999999;
+   z-index: 9999999;
    padding: 16px;
 }
 
@@ -3137,4 +3137,16 @@ ul.current-live-update li span{
 
 ul.current-live-update li p{
    font-size: 14px;
+}
+
+body.popbg:after {
+   content: " ";
+   width: 100%;
+   height: 100vh;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background: #00000070;
+   z-index: 999999;
+   transition: 0.3;
 }
